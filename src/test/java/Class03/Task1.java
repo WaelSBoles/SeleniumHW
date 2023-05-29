@@ -37,9 +37,13 @@ public class Task1 {
         WebElement state=driver.findElement(By.xpath("//select[@name='state']"));
 
         state.click();
+        //*********Very important : to get the dropdown list
         WebElement DropDownMenu= driver.findElement(By.name("state"));
         Select dropdown =new Select((DropDownMenu));
         dropdown.selectByIndex(34);
+       // dropdown.selectByValue("North Carolina");
+       // dropdown.selectByVisibleText("California");
+        //************
         Thread.sleep(2000);
         WebElement zip=driver.findElement(By.xpath("//input[@name='zip']"));
 
